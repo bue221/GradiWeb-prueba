@@ -13,12 +13,12 @@ import OtherTemps from '../../components/OtherTemps'
 
 import LocationSvg from '../../assets/svg/LocationSvg'
 
-import { MyFecthApi } from '../../util'
+import { MyFecthApi, isMobile } from '../../util'
 
 const API_KEY = 'ac47c7d64690c2c4e31689a578824f1d'
 
 const HomePage = () => {
-  const classes = useStyles()
+  const classes = useStyles(isMobile)
   // states
   const [climaBogota, setClimaBogota] = useState(null)
   const [climaParis, setClimaParis] = useState(null)
@@ -39,7 +39,7 @@ const HomePage = () => {
     )
   }, [])
 
-  // console.log(climaBogota)
+  console.log(isMobile)
   return (
     <>
       <div className={classes.btnBacancito}>
@@ -151,7 +151,7 @@ const HomePage = () => {
             </div>
             <Paper className={classes.AddLocation}>
               <button className={classes.btnLocation}>add location</button>
-              <div>
+              <div style={{ marginBottom: '-40px' }}>
                 <LocationSvg />
               </div>
             </Paper>

@@ -34,9 +34,9 @@ const OtherTemps = ({ title, subtitle, humadity, temp, wind }) => {
           </div>
         </div>
         <div className={classes.card_info}>
-          <p>Humidity: {humadity}% |</p>
+          <p>Humidity: {humadity}%</p>
           <p> Nor </p>
-          <p>| {wind} km/h</p>
+          <p>{wind} km/h</p>
         </div>
       </Paper>
     </>

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   otherCountries: {
     position: 'relative',
-    marginTop: '-12pc',
+    marginTop: (isMobile) => (isMobile ? '' : '-10pc'),
   },
   btnBacancito: {
     position: 'absolute',
@@ -100,12 +100,13 @@ const useStyles = makeStyles((theme) => ({
   },
   btnBacancito_temp_text_1: {
     display: 'flex',
+    fontSize: '40px',
   },
   map_header: {
     position: 'relative',
   },
   AddLocation: {
-    border: 'dashed 4px #cfc8c8',
+    border: 'dashed 4px #ebebeb',
     borderRadius: '1rem',
     display: 'flex',
     flexDirection: 'column',
@@ -114,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '2em',
   },
   btnLocation: {
+    outline: 'none',
     background: '#9366e642',
     marginTop: '2rem',
     opacity: '.9',

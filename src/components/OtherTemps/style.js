@@ -21,6 +21,7 @@ const useStyles = makeStyles(() => ({
     padding: '0.5rem',
     display: 'flex',
     justifyContent: 'space-between',
+    fontSize: '13px',
   },
   card_temp: {
     display: 'flex',
