@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 
 import useStyles from './style'
@@ -19,6 +18,7 @@ const HomePage = () => {
   const classes = useStyles()
   const [climaBogota, setClimaBogota] = useState(null)
   const [climaParis, setClimaParis] = useState(null)
+  const [climaAlemania, setClimaAlemania] = useState(null)
 
   useEffect(() => {
     MyFecthApi(
@@ -29,9 +29,13 @@ const HomePage = () => {
       `http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=${API_KEY}`,
       setClimaParis
     )
+    MyFecthApi(
+      `http://api.openweathermap.org/data/2.5/weather?q=moscu&units=metric&appid=${API_KEY}`,
+      setClimaAlemania
+    )
   }, [])
 
-  console.log(climaBogota)
+  // console.log(climaBogota)
   return (
     <>
       <div className={classes.btnBacancito}>
@@ -114,7 +118,7 @@ const HomePage = () => {
                 img="https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_1280.jpg"
               />
               <PlaceCard
-                height="200px"
+                height="160px"
                 title="Fontain"
                 subtitle="of healttin"
                 img="https://cdn.pixabay.com/photo/2015/02/25/07/39/church-648430_1280.jpg"
@@ -130,8 +134,14 @@ const HomePage = () => {
                 humadity={Math.round(climaParis?.main.humidity)}
                 wind={climaParis?.wind.speed}
               />
+              <OtherTemps
+                title={climaAlemania?.name}
+                subtitle={climaAlemania?.sys.country}
+                temp={Math.round(climaAlemania?.main.temp)}
+                humadity={Math.round(climaAlemania?.main.humidity)}
+                wind={climaAlemania?.wind.speed}
+              />
             </div>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
           </Grid>
         </Grid>
       </div>

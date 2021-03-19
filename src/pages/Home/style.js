@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
   },
   containerTempCard: {
     display: 'grid',
-    placeItems: 'center',
-    placeContent: 'center',
+    // placeItems: 'center',
+    // placeContent: 'center',
     marginTop: '3rem',
     gap: '1rem',
   },
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     placeItems: 'center',
     placeContent: 'center',
     marginTop: '2rem',
+    gap: '2rem',
   },
   paper: {
     padding: theme.spacing(2),
@@ -35,11 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   otherCountries: {
     position: 'relative',
-    marginTop: '-11pc',
+    marginTop: '-12pc',
   },
   btnBacancito: {
     position: 'absolute',
-    top: '150px',
+    top: '120px',
     boxShadow: '0px 10px 10px black',
   },
   btnBacancito_imagen: {
