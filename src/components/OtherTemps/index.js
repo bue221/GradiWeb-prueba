@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider'
 
 import useStyles from './style'
 
-const OtherTemps = ({ title, subtitle, humadity, temp, wind }) => {
+const OtherTemps = ({ title, subtitle, humadity, temp, wind, descrip }) => {
   const classes = useStyles()
   return (
     <>
@@ -35,7 +35,7 @@ const OtherTemps = ({ title, subtitle, humadity, temp, wind }) => {
         </div>
         <div className={classes.card_info}>
           <p>Humidity: {humadity}%</p>
-          <p> Nor </p>
+          <p>{descrip}</p>
           <p>{wind} km/h</p>
         </div>
       </Paper>

@@ -145,6 +145,7 @@ const HomePage = () => {
                 temp={Math.round(climaParis?.main.temp)}
                 humadity={Math.round(climaParis?.main.humidity)}
                 wind={climaParis?.wind.speed}
+                descrip={climaParis?.weather[0].description}
               />
               <OtherTemps
                 title={climaAlemania?.name}
@@ -152,6 +153,7 @@ const HomePage = () => {
                 temp={Math.round(climaAlemania?.main.temp)}
                 humadity={Math.round(climaAlemania?.main.humidity)}
                 wind={climaAlemania?.wind.speed}
+                descrip={climaAlemania?.weather[0].description}
               />
             </div>
             <Paper className={classes.AddLocation}>
