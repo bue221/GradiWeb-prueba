@@ -38,15 +38,15 @@ const Reviews = () => {
           />
           <MyAvatar
             alt="Travis Howard"
-            src="https://lh3.google.com/u/2/ogw/ADGmqu8iZSqnOOLSCd5US5KjWdaEgCuHvZTBn7-TpPyJ=s64-c-mo"
+            src="https://avatars.githubusercontent.com/u/52434296?s=460&u=590ab73c9e5f84051484a78096ad3c8110ac5539&v=4"
+          />
+          <MyAvatar
+            alt="Remy Sharp"
+            src="https://lh3.googleusercontent.com/ogw/ADGmqu9i_4TbMRT__bC5B2JgqBn6sMe6dsUGVl1s3WfbMsE=s64-c-mo"
           />
           <MyAvatar
             alt="Travis Howard"
-            src="https://lh3.google.com/u/2/ogw/ADGmqu8iZSqnOOLSCd5US5KjWdaEgCuHvZTBn7-TpPyJ=s64-c-mo"
-          />
-          <MyAvatar
-            alt="Travis Howard"
-            src="https://lh3.google.com/u/2/ogw/ADGmqu8iZSqnOOLSCd5US5KjWdaEgCuHvZTBn7-TpPyJ=s64-c-mo"
+            src="https://avatars.githubusercontent.com/u/52434296?s=460&u=590ab73c9e5f84051484a78096ad3c8110ac5539&v=4"
           />
         </AvatarGroup>
       </div>

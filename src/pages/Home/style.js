@@ -114,7 +114,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '2em',
   },
   btnLocation: {
-    background: '#9366E6',
+    background: '#9366e642',
+    marginTop: '2rem',
+    opacity: '.9',
+    border: 'none',
+    padding: '0.5rem 3rem',
+    borderRadius: '1rem',
+    transitionDuration: '1s',
+    color: '#3f00b2',
+    '&:hover': {
+      background: '#3f00b2',
+      color: 'white',
+      transitionDuration: '1s',
+    },
   },
 }))
 
