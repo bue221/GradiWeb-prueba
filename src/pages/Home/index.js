@@ -18,11 +18,16 @@ const API_KEY = 'ac47c7d64690c2c4e31689a578824f1d'
 const HomePage = () => {
   const classes = useStyles()
   const [climaBogota, setClimaBogota] = useState(null)
+  const [climaParis, setClimaParis] = useState(null)
 
   useEffect(() => {
     MyFecthApi(
       `http://api.openweathermap.org/data/2.5/forecast?q=bogota&units=metric&appid=${API_KEY}`,
       setClimaBogota
+    )
+    MyFecthApi(
+      `http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=${API_KEY}`,
+      setClimaParis
     )
   }, [])
 
@@ -118,8 +123,13 @@ const HomePage = () => {
           </Grid>
           <Grid item xs={12} md={3} className={classes.otherCountries}>
             <div className={classes.containerOtherTemps}>
-              <OtherTemps />
-              <OtherTemps />
+              <OtherTemps
+                title={climaParis?.name}
+                subtitle={climaParis?.sys.country}
+                temp={Math.round(climaParis?.main.temp)}
+                humadity={Math.round(climaParis?.main.humidity)}
+                wind={climaParis?.wind.speed}
+              />
             </div>
             <Paper className={classes.paper}>xs=6 sm=3</Paper>
           </Grid>
