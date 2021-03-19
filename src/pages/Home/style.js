@@ -101,6 +101,21 @@ const useStyles = makeStyles((theme) => ({
   btnBacancito_temp_text_1: {
     display: 'flex',
   },
+  map_header: {
+    position: 'relative',
+  },
+  AddLocation: {
+    border: 'dashed 4px #cfc8c8',
+    borderRadius: '1rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: '2em',
+  },
+  btnLocation: {
+    background: '#9366E6',
+  },
 }))
 
 export default useStyles

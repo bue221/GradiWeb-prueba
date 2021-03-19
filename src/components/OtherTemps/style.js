@@ -4,6 +4,7 @@ const useStyles = makeStyles(() => ({
   card: {
     maxWidth: '400px',
     display: 'flex',
+    height: '145px',
     flexDirection: 'column',
     background: 'white',
     // padding: '1em',
@@ -16,6 +17,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
   },
   card_info: {
+    color: 'grey',
     padding: '0.5rem',
     display: 'flex',
     justifyContent: 'space-between',
@@ -30,6 +32,7 @@ const useStyles = makeStyles(() => ({
     padding: '0.5em',
     borderRadius: '1rem',
     marginRight: '3rem',
+    width: '70px',
   },
   divader: {
     borderLeft: '3px solid grey',

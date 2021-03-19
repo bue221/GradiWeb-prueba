@@ -12,7 +12,11 @@ const OtherTemps = ({ title, subtitle, humadity, temp, wind }) => {
       <Paper className={classes.card} elevation={3}>
         <div className={classes.card_countrie}>
           <div className={classes.card_image}>
-            <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="icon" />
+            <img
+              width="100%"
+              src="http://openweathermap.org/img/wn/10n@2x.png"
+              alt="icon"
+            />
           </div>
           <div className={classes.card_temp}>
             <div className={classes.temp_numbre}>
@@ -30,11 +34,9 @@ const OtherTemps = ({ title, subtitle, humadity, temp, wind }) => {
           </div>
         </div>
         <div className={classes.card_info}>
-          <p>Humidity: {humadity}%</p>
-          <Divider orientation="vertical" flexItem />
-          <p>Nor</p>
-          <Divider orientation="vertical" flexItem />
-          <p>{wind} km/h</p>
+          <p>Humidity: {humadity}% |</p>
+          <p> Nor </p>
+          <p>| {wind} km/h</p>
         </div>
       </Paper>
     </>

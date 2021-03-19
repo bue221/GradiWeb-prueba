@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 
 import Grid from '@material-ui/core/Grid'
 
+import Paper from '@material-ui/core/Paper'
 import useStyles from './style'
 
 import TempCard from '../../components/TempCard'
 import PlaceCard from '../../components/PlaceCard'
 import Title from '../../components/Title'
 import Reviews from '../../components/Reviews'
+import OtherTemps from '../../components/OtherTemps'
+
+import LocationSvg from '../../assets/svg/LocationSvg'
 
 import { MyFecthApi } from '../../util'
-import OtherTemps from '../../components/OtherTemps'
 
 const API_KEY = 'ac47c7d64690c2c4e31689a578824f1d'
 
@@ -59,7 +62,7 @@ const HomePage = () => {
             <div>
               <img
                 className={classes.image_header}
-                src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2019/09/09/13/58/bogota-4463698_1280.jpg"
                 alt="Bogotá"
                 width="100%"
                 height="350vh"
@@ -112,7 +115,7 @@ const HomePage = () => {
               />
             </div>
           </Grid>
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={3}>
             <Reviews />
             <div className={classes.containerReviews}>
               <PlaceCard
@@ -122,14 +125,14 @@ const HomePage = () => {
                 img="https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_1280.jpg"
               />
               <PlaceCard
-                height="140px"
+                height="160px"
                 title="Fontain"
                 subtitle="of healttin"
                 img="https://cdn.pixabay.com/photo/2015/02/25/07/39/church-648430_1280.jpg"
               />
             </div>
           </Grid>
-          <Grid item xs={12} md={4} className={classes.otherCountries}>
+          <Grid item xs={12} md={3} className={classes.otherCountries}>
             <div className={classes.containerOtherTemps}>
               <OtherTemps
                 title={climaParis?.name}
@@ -146,6 +149,12 @@ const HomePage = () => {
                 wind={climaAlemania?.wind.speed}
               />
             </div>
+            <Paper className={classes.AddLocation}>
+              <button className={classes.btnLocation}>add location</button>
+              <div>
+                <LocationSvg />
+              </div>
+            </Paper>
           </Grid>
         </Grid>
       </div>
