@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 import Grid from '@material-ui/core/Grid'
-
 import Paper from '@material-ui/core/Paper'
-import useStyles from './style'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import TempCard from '../../components/TempCard'
 import PlaceCard from '../../components/PlaceCard'
@@ -11,13 +11,18 @@ import Title from '../../components/Title'
 import Reviews from '../../components/Reviews'
 import OtherTemps from '../../components/OtherTemps'
 
+import useStyles from './style'
 import LocationSvg from '../../assets/svg/LocationSvg'
 
-import { MyFecthApi, isMobile } from '../../util'
+import { MyFecthApi } from '../../util'
 
 const API_KEY = 'ac47c7d64690c2c4e31689a578824f1d'
 
 const HomePage = () => {
+  // isMobile
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
   const classes = useStyles(isMobile)
   // states
   const [climaBogota, setClimaBogota] = useState(null)
