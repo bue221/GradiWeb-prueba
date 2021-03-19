@@ -117,14 +117,10 @@ const HomePage = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={3} className={classes.otherCountries}>
-            {/* <PlaceCard
-              height="200px"
-              title="Fontain"
-              subtitle="of healttin"
-              img="https://cdn.pixabay.com/photo/2013/04/11/19/46/building-102840_1280.jpg"
-            /> */}
-            <OtherTemps />
-            <OtherTemps />
+            <div className={classes.containerOtherTemps}>
+              <OtherTemps />
+              <OtherTemps />
+            </div>
             <Paper className={classes.paper}>xs=6 sm=3</Paper>
           </Grid>
         </Grid>

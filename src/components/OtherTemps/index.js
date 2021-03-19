@@ -19,9 +19,7 @@ const OtherTemps = () => {
               <h2 className={classes.temp_numbre_title}>29</h2>
               <p className={classes.temp_numbre_subtitle}>°c</p>
             </div>
-
             <Divider orientation="vertical" flexItem />
-
             <div>
               <p>
                 <strong>Paris</strong>
