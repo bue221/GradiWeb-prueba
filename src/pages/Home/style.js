@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image_header: {
     borderRadius: '1rem',
+    objectFit: 'cover',
   },
   otherCountries: {
     position: 'relative',
@@ -41,21 +42,21 @@ const useStyles = makeStyles((theme) => ({
   btnBacancito: {
     position: 'absolute',
     top: '120px',
-    boxShadow: '0px 10px 10px black',
+    // boxShadow: '0px 10px 10px black',
   },
   btnBacancito_imagen: {
     padding: '1rem',
-    background: '#3b0d85',
-    height: '60px',
-    width: '60px',
+    background: '#0F1E71',
+    height: '70px',
+    width: '70px',
     position: 'relative',
     marginBottom: '-1rem',
     display: 'grid',
     placeContent: 'center',
-    borderTopRightRadius: '1rem',
+    borderTopRightRadius: '2rem',
     borderBottomRightRadius: '1rem',
     '&:before': {
-      border: '25px solid #3b0d85 ',
+      border: '25px solid #0F1E71 ',
       content: "''",
       borderLeftColor: 'transparent',
       borderTopColor: 'transparent',
@@ -67,16 +68,16 @@ const useStyles = makeStyles((theme) => ({
   },
   btnBacancito_temp: {
     padding: '1rem',
-    background: '#8a41ff ',
-    height: '60px',
-    width: '60px',
+    background: '#9366E6 ',
+    height: '70px',
+    width: '70px',
     color: 'white',
     display: 'grid',
     placeContent: 'center',
     fontSize: '30px',
-    borderBottomRightRadius: '1rem',
+    borderBottomRightRadius: '2rem',
     '&:before': {
-      border: '25px solid #8a41ff ',
+      border: '25px solid #9366E6 ',
       content: "''",
       borderLeftColor: 'transparent',
       borderBottomColor: 'transparent',
@@ -91,6 +92,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     gap: '1rem',
+  },
+  btnBacancito_temp_text: {
+    fontSize: '20px',
+    fontWeight: 100,
+    display: 'flex',
+  },
+  btnBacancito_temp_text_1: {
+    display: 'flex',
   },
 }))
 

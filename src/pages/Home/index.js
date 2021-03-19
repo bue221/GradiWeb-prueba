@@ -16,6 +16,7 @@ const API_KEY = 'ac47c7d64690c2c4e31689a578824f1d'
 
 const HomePage = () => {
   const classes = useStyles()
+  // states
   const [climaBogota, setClimaBogota] = useState(null)
   const [climaParis, setClimaParis] = useState(null)
   const [climaAlemania, setClimaAlemania] = useState(null)
@@ -46,7 +47,10 @@ const HomePage = () => {
           />
         </div>
         <div className={classes.btnBacancito_temp}>
-          {Math.round(climaBogota?.list[0].main.temp)}°C
+          <p className={classes.btnBacancito_temp_text_1}>
+            {Math.round(climaBogota?.list[0].main.temp)}
+            <strong className={classes.btnBacancito_temp_text}>°c</strong>
+          </p>
         </div>
       </div>
       <div className={classes.root}>
@@ -55,7 +59,7 @@ const HomePage = () => {
             <div>
               <img
                 className={classes.image_header}
-                src="https://cdn.pixabay.com/photo/2020/02/25/11/52/colombia-4878721_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg"
                 alt="Bogotá"
                 width="100%"
                 height="350vh"
@@ -66,7 +70,7 @@ const HomePage = () => {
             <Title title="3 Days" nextTitle="Forecast" size={25} />
             <div className={classes.containerTempCard}>
               <TempCard
-                color="#8a41ff"
+                color="#9366E6"
                 colorText="white"
                 title={climaBogota?.list[0].dt_txt}
                 subtitle={climaBogota?.list[0].weather[0].main}
@@ -108,7 +112,7 @@ const HomePage = () => {
               />
             </div>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={2}>
             <Reviews />
             <div className={classes.containerReviews}>
               <PlaceCard
@@ -118,14 +122,14 @@ const HomePage = () => {
                 img="https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_1280.jpg"
               />
               <PlaceCard
-                height="160px"
+                height="140px"
                 title="Fontain"
                 subtitle="of healttin"
                 img="https://cdn.pixabay.com/photo/2015/02/25/07/39/church-648430_1280.jpg"
               />
             </div>
           </Grid>
-          <Grid item xs={12} md={3} className={classes.otherCountries}>
+          <Grid item xs={12} md={4} className={classes.otherCountries}>
             <div className={classes.containerOtherTemps}>
               <OtherTemps
                 title={climaParis?.name}
