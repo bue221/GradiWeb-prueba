@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import LocationOnIcon from '@material-ui/icons/LocationOn'
 
 import TempCard from '../../components/TempCard'
 import PlaceCard from '../../components/PlaceCard'
@@ -29,6 +30,13 @@ const HomePage = () => {
   const [climaParis, setClimaParis] = useState(null)
   const [climaAlemania, setClimaAlemania] = useState(null)
 
+  // const date = new Date()
+  // const verificationDate = date.getMilliseconds() + 3 * 86400000
+  // // const verificationDate = datemiliseconds +
+  // const list = climaBogota?.list.filter((n) => n.dt <= n.dt + 86400000)
+  // // console.log(verificationDate)
+  // console.log(list)
+
   useEffect(() => {
     MyFecthApi(
       `http://api.openweathermap.org/data/2.5/forecast?q=bogota&units=metric&appid=${API_KEY}`,
@@ -44,7 +52,7 @@ const HomePage = () => {
     )
   }, [])
 
-  console.log(isMobile)
+  // console.log(isMobile)
   return (
     <>
       <div className={classes.btnBacancito}>
@@ -53,6 +61,10 @@ const HomePage = () => {
             src={`http://openweathermap.org/img/wn/${climaBogota?.list[0].weather[0].icon}@2x.png`}
             alt="icon"
           />
+          <div className={classes.btnBogota}>
+            <LocationOnIcon />
+            Bogota
+          </div>
         </div>
         <div className={classes.btnBacancito_temp}>
           <p className={classes.btnBacancito_temp_text_1}>
@@ -67,7 +79,7 @@ const HomePage = () => {
             <div>
               <img
                 className={classes.image_header}
-                src="https://cdn.pixabay.com/photo/2019/09/09/13/58/bogota-4463698_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2018/03/09/01/20/city-3210384_1280.jpg"
                 alt="Bogotá"
                 width="100%"
                 height="350vh"

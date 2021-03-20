@@ -5,6 +5,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: '2.3em',
   },
+  btnBogota: {
+    left: '150px',
+    position: 'absolute',
+    display: 'flex',
+    fontSize: '30px',
+    alignItems: 'center',
+    fontWeight: '700',
+    color: '#ffffff',
+  },
   containerTempCard: {
     display: 'grid',
     // placeItems: 'center',
