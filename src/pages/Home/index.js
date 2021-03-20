@@ -45,15 +45,15 @@ const HomePage = () => {
 
   useEffect(() => {
     MyFecthApi(
-      `http://api.openweathermap.org/data/2.5/forecast?q=bogota&units=metric&appid=${API_KEY}`,
+      `https://api.openweathermap.org/data/2.5/forecast?q=bogota&units=metric&appid=${API_KEY}`,
       setClimaBogota
     )
     MyFecthApi(
-      `http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=${API_KEY}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=${API_KEY}`,
       setClimaParis
     )
     MyFecthApi(
-      `http://api.openweathermap.org/data/2.5/weather?q=moscu&units=metric&appid=${API_KEY}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=moscu&units=metric&appid=${API_KEY}`,
       setClimaAlemania
     )
   }, [])
