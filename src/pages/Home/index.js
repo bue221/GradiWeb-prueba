@@ -30,11 +30,16 @@ const HomePage = () => {
   const [climaParis, setClimaParis] = useState(null)
   const [climaAlemania, setClimaAlemania] = useState(null)
 
-  // const date = new Date()
-  // const verificationDate = date.getMilliseconds() + 3 * 86400000
-  // // const verificationDate = datemiliseconds +
-  // const list = climaBogota?.list.filter((n) => n.dt <= n.dt + 86400000)
-  // // console.log(verificationDate)
+  // filter para obtener un array con las fechas mayores o iguales al dia de hoy + 3 dias
+  const list = climaBogota?.list.filter((n) => {
+    const date = new Date(n.dt_txt)
+    const nowDate = new Date()
+    const dias = 3
+    const sumaFecha = nowDate.setDate(nowDate.getDate() + dias)
+    // console.log(sumaFecha)
+    return date <= sumaFecha
+  })
+
   // console.log(list)
 
   useEffect(() => {
@@ -92,32 +97,32 @@ const HomePage = () => {
               <TempCard
                 color="#9366E6"
                 colorText="white"
-                title={climaBogota?.list[0].dt_txt}
-                subtitle={climaBogota?.list[0].weather[0].main}
-                temp={`${Math.round(
-                  climaBogota?.list[0].main.temp_min
-                )}°/${Math.round(climaBogota?.list[0].main.temp_max)}°`}
-                icon={climaBogota?.list[0].weather[0].icon}
+                title={list[0]?.dt_txt}
+                subtitle={list[0]?.weather[0].main}
+                temp={`${Math.round(list[0]?.main.temp_min)}°/${Math.round(
+                  list[0]?.main.temp_max
+                )}°`}
+                icon={list[0]?.weather[0].icon}
               />
               <TempCard
                 color="#BFD8E5"
                 colorText="black"
-                title={climaBogota?.list[2].dt_txt}
-                subtitle={climaBogota?.list[2].weather[0].main}
-                temp={`${Math.round(
-                  climaBogota?.list[2].main.temp_min
-                )}°/${Math.round(climaBogota?.list[2].main.temp_max)}° `}
-                icon={climaBogota?.list[2].weather[0].icon}
+                title={list[12]?.dt_txt}
+                subtitle={list[12]?.weather[0].main}
+                temp={`${Math.round(list[12]?.main.temp_min)}°/${Math.round(
+                  list[12]?.main.temp_max
+                )}° `}
+                icon={list[12]?.weather[0].icon}
               />
               <TempCard
                 color="#BFD8E5"
                 colorText="black"
-                title={climaBogota?.list[12].dt_txt}
-                subtitle={climaBogota?.list[12].weather[0].main}
-                temp={`${Math.round(
-                  climaBogota?.list[12].main.temp_min
-                )}°/${Math.round(climaBogota?.list[12].main.temp_max)}°`}
-                icon={climaBogota?.list[12].weather[0].icon}
+                title={list[20]?.dt_txt}
+                subtitle={list[20]?.weather[0].main}
+                temp={`${Math.round(list[20]?.main.temp_min)}°/${Math.round(
+                  list[20]?.main.temp_max
+                )}°`}
+                icon={list[20]?.weather[0].icon}
               />
             </div>
           </Grid>
