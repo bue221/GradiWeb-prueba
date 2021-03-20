@@ -5,6 +5,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: '2.3em',
   },
+  loader: {
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   btnBogota: {
     left: '150px',
     position: 'absolute',
@@ -115,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
   },
   AddLocation: {
-    border: 'dashed 4px #ebebeb',
+    border: 'dashed 3px #ebebeb',
     borderRadius: '1rem',
     display: 'flex',
     flexDirection: 'column',
