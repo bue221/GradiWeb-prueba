@@ -84,7 +84,7 @@ const HomePage = () => {
             <div>
               <img
                 className={classes.image_header}
-                src="https://cdn.pixabay.com/photo/2018/03/09/01/20/city-3210384_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2019/09/07/02/25/city-4457801_1280.jpg"
                 alt="Bogotá"
                 width="100%"
                 height="350vh"
