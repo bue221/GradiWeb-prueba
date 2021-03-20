@@ -94,36 +94,40 @@ const HomePage = () => {
           <Grid item xs={12} md={3}>
             <Title title="3 Days" nextTitle="Forecast" size={25} />
             <div className={classes.containerTempCard}>
-              <TempCard
-                color="#9366E6"
-                colorText="white"
-                title={list[0]?.dt_txt}
-                subtitle={list[0]?.weather[0].main}
-                temp={`${Math.round(list[0]?.main.temp_min)}°/${Math.round(
-                  list[0]?.main.temp_max
-                )}°`}
-                icon={list[0]?.weather[0].icon}
-              />
-              <TempCard
-                color="#BFD8E5"
-                colorText="black"
-                title={list[12]?.dt_txt}
-                subtitle={list[12]?.weather[0].main}
-                temp={`${Math.round(list[12]?.main.temp_min)}°/${Math.round(
-                  list[12]?.main.temp_max
-                )}° `}
-                icon={list[12]?.weather[0].icon}
-              />
-              <TempCard
-                color="#BFD8E5"
-                colorText="black"
-                title={list[20]?.dt_txt}
-                subtitle={list[20]?.weather[0].main}
-                temp={`${Math.round(list[20]?.main.temp_min)}°/${Math.round(
-                  list[20]?.main.temp_max
-                )}°`}
-                icon={list[20]?.weather[0].icon}
-              />
+              {list && !!list.length && (
+                <>
+                  <TempCard
+                    color="#9366E6"
+                    colorText="white"
+                    title={list[0]?.dt_txt}
+                    subtitle={list[0]?.weather[0].main}
+                    temp={`${Math.round(list[0]?.main.temp_min)}°/${Math.round(
+                      list[0]?.main.temp_max
+                    )}°`}
+                    icon={list[0]?.weather[0].icon}
+                  />
+                  <TempCard
+                    color="#BFD8E5"
+                    colorText="black"
+                    title={list[12]?.dt_txt}
+                    subtitle={list[12]?.weather[0].main}
+                    temp={`${Math.round(list[12]?.main.temp_min)}°/${Math.round(
+                      list[12]?.main.temp_max
+                    )}° `}
+                    icon={list[12]?.weather[0].icon}
+                  />
+                  <TempCard
+                    color="#BFD8E5"
+                    colorText="black"
+                    title={list[20]?.dt_txt}
+                    subtitle={list[20]?.weather[0].main}
+                    temp={`${Math.round(list[20]?.main.temp_min)}°/${Math.round(
+                      list[20]?.main.temp_max
+                    )}°`}
+                    icon={list[20]?.weather[0].icon}
+                  />
+                </>
+              )}
             </div>
           </Grid>
           <Grid item xs={12} md={3}>
